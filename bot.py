@@ -22,11 +22,11 @@ async def update_count(count):
     all, online, robot = count
     nameTotal, nameOnline, nameBots = "total","online","bots"
         
-    await bot.edit_channel(channel=bot.get_channel(os.getenv('TOTAL')),
+    await bot.edit_channel(channel=bot.get_channel('total'),
                            name= await format.convert_string(nameTotal + ' : ') + str(all))
-    await bot.edit_channel(channel=bot.get_channel(os.getenv('ONLINE')),
+    await bot.edit_channel(channel=bot.get_channel('online'),
                            name=await format.convert_string(nameOnline + ' : ') + str(online))
-    await bot.edit_channel(channel=bot.get_channel(os.getenv('BOTS')),
+    await bot.edit_channel(channel=bot.get_channel('bots'),
                            name=await format.convert_string(nameBots + ' : ') + str(robot))
 
 @bot.event
