@@ -45,4 +45,4 @@ async def on_member_update(before, after):
 async def on_ready():
     await update_count(await get_server_count())
 
-bot.run(os.getenv('TOKEN'))
+bot.run(os.getenv(ACCESS_TOKEN))
